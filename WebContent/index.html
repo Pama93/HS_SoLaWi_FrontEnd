@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    	<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+    	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>SoLaWi</title>
+    </head>
+    <body>
+<!-- HIER BEGINNT DAS SIDE MENU -->
+		<div data-role="panel" id="panel-1">
+			<ul data-role="listview" id="listview-1">
+				<li><a href="abholungsantwort.html">Abholungsantwort verfassen</a></li>
+				<li><a href="abholerliste.html">Abholerliste</a></li>
+				<li><a href="problemmeldung_auswahl.html">Problemmeldung verfassen</a></li>
+				<li><a href="problemmeldungen.html">Problemmeldungen</a></li>
+				<li><a href="abholeranzahl.html">Abholeranzahl anzeigen</a></li>
+				<li><a href="datenblaetter.html">Datenbl&auml;tter</a></li>
+				<li><a href="verlinkungen.html">Verlinkungen</a></li>
+			</ul>
+		</div>
+		<div data-role="page" id="page-1">
+			<div data-role="header">
+		<div data-role="page" id="page-1">
+		</div>
+			<div data-role="header">
+<!-- MENU BUTTON FUER JEDE PAGE -->
+				<a href="#panel-1" id="button-1" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all">Menu</a>
+				</b><h1>Anmeldung</h1>
+			</div>
+<!-- Hier beginnt der Content -->
+			<div data-role="content">
+				<div class="ui-field-contain">
+					<label for="text-1"></label>
+					<input name="text-1" id="text-1" data-clear-btn="true" value="" placeholder="Benutzername" required="true" type="text"/>
+					<div class="ui-field-contain">
+						<label for="text-2"></label>
+						<input name="text-2" id="text-2" data-clear-btn="true" value="" placeholder="Passwort" required="true" type="text"/>
+					</div>
+				</div>
+			</div>
+<!-- Hier beginnt der Footer -->			
+			<div data-role="footer" id="footer-1" data-position="fixed" data-fullscreen="true" class="ui-bar">
+				<div data-role="controlgroup" data-type="horizontal" class="ui-mini">
+					<a href="" id="buttonBeenden" class="ui-btn">Beenden</a>
+					<a href="willkommen.html" id="buttonAnmelden" class="ui-btn" >Anmelden</a>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>
