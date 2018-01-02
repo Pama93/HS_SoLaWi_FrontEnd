@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    	<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+    	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>SoLaWi</title>
+    </head>
+    <body>
+<!-- HIER BEGINNT DAS SIDE MENU -->
+		<div data-role="panel" id="panel-1">
+			<ul data-role="listview" id="listview-1">
+				<li><a href="abholungsantwort.html">Abholungsantwort verfassen</a></li>
+				<li><a href="abholerliste.html">Abholerliste</a></li>
+				<li><a href="problemmeldung_auswahl.html">Problemmeldung verfassen</a></li>
+				<li><a href="problemmeldungen.html">Problemmeldungen</a></li>
+				<li><a href="abholeranzahl.html">Abholeranzahl anzeigen</a></li>
+				<li><a href="datenblaetter.html">Datenbl&auml;tter</a></li>
+				<li><a href="verlinkungen.html">Verlinkungen</a></li>
+			</ul>
+		</div>
+		<div data-role="page" id="page-1">
+			<div data-role="header">
+		<div data-role="page" id="page-1">
+		</div>
+			<div data-role="header">
+<!-- MENU BUTTON FUER JEDE PAGE -->
+				<a href="#panel-1" id="button-1" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all">Men&uuml;</a>
+				</b><h1>Problemmeldung ohne Koordination</h1>
+			</div>
+<!-- Hier beginnt der Content -->
+			<div>
+				<label for="textarea-1">Nachricht an Mitglieder:</label>
+				<textarea name="textarea-1" id="textarea-1" data-clear-btn="true" placeholder="Beschreibung des Problems" cols="40" rows="8"></textarea>
+			</div>
+				<div class="ui-field-contain">
+					<label for="text-1">Anzahl benötigter Helfer:</label>
+					<input name="text-1" id="text-1" data-clear-btn="true" value="" type="text"/>
+				</div>
+				<a href="index.html" id="senden" class="ui-btn ui-corner-all">Senden</a>
+<script type="text/javascript">
+
+    $('#senden').click(function(){ 
+    	var helferAnzahl = document.getElementById("helferAnzahl");
+        //alert('ajax');
+         $.ajax({ 
+             type: "GET",
+             dataType: "jsonp",
+             //url: "http://vs.zemit.wi.hs-osnabrueck.de/REST_MessageResource/rest/hello/getAuftragByID/"+orderno.value+"?callback=?",
+            //url: "http://vs.zemit.wi.hs-osnabrueck.de/INVO/rest/hello/getAuftragByID/"+orderno.value+"?callback=?", 
+            url: "http://131.173.88.192/HS_SoLaWi_BackEnd/rest/solawi/anlegenProblemveranstaltung/"+helferAnzahl.value+"?callback=?",
+            success: function(data){        
+            	 var obj = data.aposliste;   	 
+            	 var transform = {'<>':'li','html':'Artikel: ${text} Menge: ${menge} Preis: ${menge}'};
+            	 document.getElementById('list').innerHTML = json2html.transform(obj,transform);
+             },
+         error: function(XMLHttpRequest, textStatus, errorThrown) { 
+             alert("Status: " + textStatus); 
+             alert("Error: " + errorThrown); 
+             alert(XMLHttpRequest.responseText);
+         }  
+         });
+    });
+
+</script>
+
+</body>
+    
+
+</html>

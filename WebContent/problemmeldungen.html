@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    	<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+    	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>SoLaWi</title>
+    </head>
+    <body>
+<!-- HIER BEGINNT DAS SIDE MENU -->
+		<div data-role="panel" id="panel-1">
+			<ul data-role="listview" id="listview-1">
+				<li><a href="abholungsantwort.html">Abholungsantwort verfassen</a></li>
+				<li><a href="abholerliste.html">Abholerliste</a></li>
+				<li><a href="problemmeldung_auswahl.html">Problemmeldung verfassen</a></li>
+				<li><a href="problemmeldungen.html">Problemmeldungen</a></li>
+				<li><a href="abholeranzahl.html">Abholeranzahl anzeigen</a></li>
+				<li><a href="datenblaetter.html">Datenbl&auml;tter</a></li>
+				<li><a href="verlinkungen.html">Verlinkungen</a></li>
+			</ul>
+		</div>
+		<div data-role="page" id="page-1">
+			<div data-role="header">
+		<div data-role="page" id="page-1">
+		</div>
+			<div data-role="header">
+<!-- MENU BUTTON FUER JEDE PAGE -->
+				<a href="#panel-1" id="button-1" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all">Men&uuml;</a>
+				</b><h1>Problemmeldungen</h1>
+			</div>
+<!-- Hier beginnt der Content -->
+			<div>
+				<table data-role="table" id="table-1" class="ui-responsive">
+					<thead>
+						<tr>
+							<th data-priority="1">Nr</th>
+							<th data-priority="1">Problem</th>
+							<th data-priority="2">benötigte Helfer</th>
+							<th data-priority="3">Zusagen</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Folientunnel aufbauen</td>
+							<td>11</td>
+							<td>5</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div>
+				<fieldset data-role="controlgroup" data-iconpos="left" id="checkboxes-1">
+					<legend></legend>
+					<input name="checkbox-1a" id="checkbox-1a" type="checkbox"/>
+					<label for="checkbox-1a">Ich komme helfen</label>
+					<input name="checkbox-1b" id="checkbox-1b" type="checkbox"/>
+					<label for="checkbox-1b">Termin 1</label>
+					<input name="checkbox-1c" id="checkbox-1c" type="checkbox"/>
+					<label for="checkbox-1c">Termin 2</label>
+					<input name="checkbox-1d" id="checkbox-1d" type="checkbox"/>
+					<label for="checkbox-1d">Termin 3</label>
+					<input name="checkbox-1e" id="checkbox-1e" type="checkbox"/>
+					<label for="checkbox-1e">Ich komme nicht helfen</label>
+				</fieldset>
+			</div>
+
+    </body>
+</html>

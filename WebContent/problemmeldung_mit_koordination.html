@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    	<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+    	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>SoLaWi</title>
+    </head>
+    <body>
+<!-- HIER BEGINNT DAS SIDE MENU -->
+		<div data-role="panel" id="panel-1">
+			<ul data-role="listview" id="listview-1">
+				<li><a href="abholungsantwort.html">Abholungsantwort verfassen</a></li>
+				<li><a href="abholerliste.html">Abholerliste</a></li>
+				<li><a href="problemmeldung_auswahl.html">Problemmeldung verfassen</a></li>
+				<li><a href="problemmeldungen.html">Problemmeldungen</a></li>
+				<li><a href="abholeranzahl.html">Abholeranzahl anzeigen</a></li>
+				<li><a href="datenblaetter.html">Datenbl&auml;tter</a></li>
+				<li><a href="verlinkungen.html">Verlinkungen</a></li>
+			</ul>
+		</div>
+		<div data-role="page" id="page-1">
+			<div data-role="header">
+		<div data-role="page" id="page-1">
+		</div>
+			<div data-role="header">
+<!-- MENU BUTTON FUER JEDE PAGE -->
+				<a href="#panel-1" id="button-1" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all">Men&uuml;</a>
+				</b><h1>Problemmeldung mit Koordination</h1>
+			</div>
+<!-- Hier beginnt der Content -->
+			<div>
+				<label for="textarea-1">Nachricht an Mitglieder:</label>
+				<textarea name="textarea-1" id="textarea-1" data-clear-btn="true" placeholder="Beschreibung des Problems" cols="40" rows="8"></textarea>
+			</div>
+			<div>
+				<div class="ui-field-contain">
+					<label for="date-1">Terminvorschlag 1:</label>
+					<input name="date-1" id="date-1" data-clear-btn="true" value="" placeholder="Beispiel 04.12.2017" type="date"/>
+				</div>
+				<div class="ui-field-contain">
+					<label for="date-2">Terminvorschlag 2:</label>
+					<input name="date-2" id="date-2" data-clear-btn="true" value="" placeholder="Beispiel 04.12.2017" type="date"/>
+				</div>
+				<div class="ui-field-contain">
+					<label for="date-3">Terminvorschlag 3:</label>
+					<input name="date-3" id="date-3" data-clear-btn="true" value="" placeholder="Beispiel 04.12.2017" type="date"/>
+				</div>
+			
+			</div>
+			<div>
+				<div class="ui-field-contain">
+					<label for="text-1">Anzahl benötigter Helfer:</label>
+					<input name="text-1" id="text-1" data-clear-btn="true" value="" type="text"/>
+				</div>
+			
+			</div>
+    </body>
+</html>
